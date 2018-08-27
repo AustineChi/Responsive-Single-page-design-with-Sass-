@@ -1,0 +1,134 @@
+$background-color-dark: #101110;
+$background-color-lightBlue:#306483;
+$color-gray-dark: #777;
+$color-white: #fff;
+
+* {
+     margin: 0;
+     padding: 0; 
+     box-sizing: border-box
+ }
+
+ .body-wrapper {
+     font-family: "Lato", sans-serif;
+     font-weight: 400;
+     font-size: 16px;
+     line-height: 1.7;
+     color: $color-gray-dark;
+     padding: 7px
+ }
+
+ .header {
+     height: 600px;
+     background-image: linear-gradient(
+         to right bottom,
+        rgba($background-color-dark, 0.8),
+        rgba($background-color-lightBlue, 0.8)) ,
+          url(../images/davido.jpg);
+     background-size: cover;
+     background-position: top;
+     clip-path: polygon(0 0, 100% 0, 100% 450px, 0 100%);
+     position: relative
+ }
+ .logo-box {
+position: absolute;
+top: 40px;
+left: 40px
+ }
+
+ .logo {
+height: 60px;
+ }
+.heading-primary {
+color: $color-white;
+text-transform: uppercase;
+backface-visibility: hidden;
+margin-bottom: 30px;
+}
+.heading-primary-main {
+display:block;
+font-size: 25px;
+font-weight: 900;
+letter-spacing: 15px; 
+margin-bottom: 10px;
+animation-name: moveInLeft;
+animation-duration: 1s;
+animation-timing-function: ease-out 
+
+}
+.heading-primary-sub {
+display: block;
+font-size: 14.7px;
+font-weight: 700;
+letter-spacing: 12px;
+animation-name: moveInRight;
+animation-duration: 1s;
+animation-timing-function: ease-out
+}
+.center-header-elements {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+.btn-animated {
+animation: moveUpButton .7s ease-out .5s;
+animation-fill-mode: backwards
+}
+
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    100%{
+opacity: 1;
+transform: translate(0)
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px)
+            }
+           
+            100% {
+                opacity: 1;
+                transform: translate(0)
+            }
+}
+
+@keyframes moveUpButton {
+    0%{
+        opacity: 0;
+        transform: translateY(40px)
+    }
+    100%{
+opacity: 1;
+transform: translate(0)
+    }
+}
+.btn:link, .btn:visited{
+text-decoration: none;
+text-transform: uppercase;
+padding: 7px 40px;
+display: inline-block;
+border-radius: 100px;
+transition: all 1s
+}
+
+.btn-white {
+    background-color: $color-white;
+    color: $color-gray-dark
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3)
+}
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+
+}
